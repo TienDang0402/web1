@@ -1,0 +1,118 @@
+﻿
+@model WebBanlaptop.Models.NHANVIEN
+
+@{
+    ViewBag.Title = "addAdmin";
+    Layout = "~/Views/Layout/_AdminLayout.cshtml";
+    bool type = (bool)ViewBag.type;
+}
+<div class="card shadow mb-4">
+    <div class="card-body">
+        <div class="table-responsive">
+            <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                <div class="col-sm-12">
+                    @if (!type)
+                    {
+                        using (Html.BeginForm("changePWAdmin", "Admin", new { type = type, id=Model.MANV }, FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="form-horizontal">
+                                <h1 class="h3 mb-2 text-gray-800">Đổi mật khẩu</h1>
+                                <hr />
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.TENNV, "Tên nhân viên", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.TENNV, new { htmlAttributes = new { @class = "form-control" , @disabled = "disabled" } })
+                                        @Html.ValidationMessageFor(model => model.TENNV, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.USERNAME, "Tài khoản", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.USERNAME, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                                        @Html.ValidationMessageFor(model => model.USERNAME, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.PASSWORD, "Mật khẩu", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.Password("PASSWORD", "", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.PASSWORD, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.PASSWORD, "Nhập lại mật khẩu", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.Password("XNPASSWORD", "", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.PASSWORD, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <hr />
+                                <h1 class="h4 text-gray-900 mb-4">@ViewData["Error"]</h1>
+                                <hr />
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <input type="submit" value="Thay đổi" class="btn btn-default btn btn-info create-admin" />
+                                        <a href="@Url.Action("ListAdmin","Admin")" class="btn btn-danger">Trở lại</a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        using (Html.BeginForm("changePWAdmin","Admin", new { type = type }, FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="form-horizontal">
+                                <h1 class="h3 mb-2 text-gray-800">Đổi mật khẩu</h1>
+                                <hr />
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.TENNV, "Tên nhân viên", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.TENNV, new { htmlAttributes = new { @class = "form-control" , @disabled = "disabled" } })
+                                        @Html.ValidationMessageFor(model => model.TENNV, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.USERNAME, "Tài khoản", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.USERNAME, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                                        @Html.ValidationMessageFor(model => model.USERNAME, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.PASSWORD, "Mật khẩu", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.Password("PASSWORD", "", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.PASSWORD, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <hr />
+                                <h1 class="h4 text-gray-900 mb-4">@ViewData["Error"]</h1>
+                                <hr />
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <input type="submit" value="Thay đổi" class="btn btn-default btn btn-info create-admin" />
+                                        <a href="@Url.Action("ListAdmin","Admin")" class="btn btn-danger">Trở lại</a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

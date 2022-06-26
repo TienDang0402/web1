@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLBANLAPTOPModelStoreContainer" CdmEntityContainer="QLBANLAPTOPEntities">
+    <EntitySetMapping Name="BINHLUAN">
+      <EntityTypeMapping TypeName="QLBANLAPTOPModel.BINHLUAN">
+        <MappingFragment StoreEntitySet="BINHLUAN">
+          <ScalarProperty Name="MABL" ColumnName="MABL" />
+          <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
+          <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CHITIETSP">
+      <EntityTypeMapping TypeName="QLBANLAPTOPModel.CHITIETSP">
+        <MappingFragment StoreEntitySet="CHITIETSP">
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="MAMAU" ColumnName="MAMAU" />
+          <ScalarProperty Name="SOLUONGTON" ColumnName="SOLUONGTON" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CHITIETHD">
+      <EntityTypeMapping TypeName="QLBANLAPTOPModel.CHITIETHD">
+        <MappingFragment StoreEntitySet="CHITIETHD">
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="MAMAU" ColumnName="MAMAU" />
+          <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+          <ScalarProperty Name="DONGIA" ColumnName="DONGIA" />
+          <ScalarProperty Name="DIACHIGIAOHANG" ColumnName="DIACHIGIAOHANG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HOADON">
+      <EntityTypeMapping TypeName="QLBANLAPTOPModel.HOADON">
+        <MappingFragment StoreEntitySet="HOADON">
+          <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+          <ScalarProperty Name="NGAYLAP" ColumnName="NGAYLAP" />
+          <ScalarProperty Name="NGAYGIAO" ColumnName="NGAYGIAO" />
+          <ScalarProperty Name="TONGTIEN" ColumnName="TONGTIEN" />
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KHACHHANG">
+      <EntityTypeMapping TypeName="QLBANLAPTOPModel.KHACHHANG">
+        <MappingFragment StoreEntitySet="KHACHHANG">
+          <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+          <ScalarProperty Name="TENKH" ColumnName="TENKH" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="CCCD" ColumnName="CCCD" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOAISANPHAM">
+      <EntityTypeMapping TypeName="QLBANLAPTOPModel.LOAISANPHAM">
+        <MappingFragment StoreEntitySet="LOAISANPHAM">
+          <ScalarProperty Name="MALSP" ColumnName="MALSP" />
+          <ScalarProperty Name="TENLOAISP" ColumnName="TENLOAISP" />
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+          <ScalarProperty Name="ICON" ColumnName="ICON" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAUSAC">
+      <EntityTypeMapping TypeName="QLBANLAPTOPModel.MAUSAC">
+        <MappingFragment StoreEntitySet="MAUSAC">
+          <ScalarProperty Name="MAMAU" ColumnName="MAMAU" />
+          <ScalarProperty Name="TENMAU" ColumnName="TENMAU" />
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NHANVIEN">
+      <EntityTypeMapping TypeName="QLBANLAPTOPModel.NHANVIEN">
+        <MappingFragment StoreEntitySet="NHANVIEN">
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="TENNV" ColumnName="TENNV" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="CCCD" ColumnName="CCCD" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NHASANXUAT">
+      <EntityTypeMapping TypeName="QLBANLAPTOPModel.NHASANXUAT">
+        <MappingFragment StoreEntitySet="NHASANXUAT">
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="MANSX" ColumnName="MANSX" />
+          <ScalarProperty Name="TENNSX" ColumnName="TENNSX" />
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SANPHAM">
+      <EntityTypeMapping TypeName="QLBANLAPTOPModel.SANPHAM">
+        <MappingFragment StoreEntitySet="SANPHAM">
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="CAUHINH" ColumnName="CAUHINH" />
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="TENSP" ColumnName="TENSP" />
+          <ScalarProperty Name="DONGIA" ColumnName="DONGIA" />
+          <ScalarProperty Name="HINHANH" ColumnName="HINHANH" />
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+          <ScalarProperty Name="MALSP" ColumnName="MALSP" />
+          <ScalarProperty Name="MANSX" ColumnName="MANSX" />
+          <ScalarProperty Name="SANPHAMMOI" ColumnName="SANPHAMMOI" />
+          <ScalarProperty Name="SPNOIBAT" ColumnName="SPNOIBAT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

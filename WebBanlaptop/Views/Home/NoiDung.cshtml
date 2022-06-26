@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "NoiDung";
+    Layout = "~/Views/Layout/_HomeLayout.cshtml";
+}
+<link href="~/Content/css/cssGioiThieu.css" rel="stylesheet" />
+<style>
+    .title-news {
+        text-transform: uppercase;
+    }
+</style>
+<div id="main">
+    
+        <div class="col-md-9">
+            <h4 class="title-news border-bottom shadow-sm p-2 mb-3">@Model.TENTT</h4>
+
+            <h5 class="title-news border-bottom shadow-sm p-2 mb-2">@Model.MOTA</h5>
+            <img src="~/Content/HinhTinTuc/@Model.HINHTT" width="500" />
+            <div class="content-news">
+                @Html.Raw(Model.NOIDUNG)
+            </div>
+        </div>
+ </div>
+
+
+

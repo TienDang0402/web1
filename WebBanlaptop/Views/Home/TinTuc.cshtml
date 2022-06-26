@@ -1,0 +1,41 @@
+﻿@using WebBanlaptop.Models;
+@model IEnumerable<TINTUC>
+@{
+    ViewBag.Title = "TinTuc";
+    Layout = "~/Views/Layout/_HomeLayout.cshtml";
+}
+
+
+<link href="~/Content/css/cssGioiThieu.css" rel="stylesheet" />
+
+<div id="main">
+    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Tin tức</span></h2>
+    <div class="col-md-9">
+        <div class="row row-cols-md-3 row-cols-1">
+            @foreach (var item in Model)
+            {
+                if (item.TRANGTHAI)
+                {
+                    <div class="col my-3">
+                        <div class="artical-item text-center">
+                            <div class="artical-title p-2" style="height: 60px;">
+                                <a href="/Home/Noidung/@item.MATT">
+                                    <h5>@item.TENTT</h5>
+                                </a>
+                            </div>
+                            <div class="artical-img">
+                                <a href="/Home/NoiDung/@item.MATT">
+                                    <img src="~/Content/HinhTinTuc/@item.HINHTT" width="300">
+                                </a>
+                            </div>
+                            <div class="artical-des p-2 text-muted">
+                                @item.MOTA
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            }
+        </div>
+    </div>
+</div>

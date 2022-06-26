@@ -1,0 +1,162 @@
+﻿@using WebBanlaptop.Models;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<TINTUC>
+@{
+    ViewBag.Title = "ListTinTuc";
+    Layout = "~/Views/Layout/_AdminLayout.cshtml";
+    IEnumerable<TINTUC> listTinTuc = (IEnumerable<TINTUC>)ViewBag.lstTT;
+    int iDem = 0; // đếm sl sp trên trang
+    int iSoLuongSPHienThi = 5;// sl nv hiển nthij trên trang
+    int iTrang = 1;//số trang
+    <script src="~/Scripts/admin.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.slim.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
+
+
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Danh sách tin tức</h1>
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <button type="button" class="btn btn-info create-admin" onclick="location.href='@Url.Action("ThemTinTuc", "Admin")'">Tạo tin tức mới</button>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                    <div class="col-sm-12">
+                        <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                            <thead>
+                                <tr>
+
+                                    <th rowspan="1" colspan="1">Tên</th>
+                                    <th rowspan="1" colspan="1">Hình</th>
+                                    <th rowspan="1" colspan="1">Mô tả</th>
+                                    <th rowspan="1" colspan="1">Nội dung</th>
+                                    <th rowspan="1" colspan="1">Trạng thái</th>
+                                    <th rowspan="1" colspan="1">Chức năng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in listTinTuc)
+                                {
+                                    if (iDem % iSoLuongSPHienThi == 0 && iDem != 0)
+                                    {
+                                        iTrang++;
+                                    }
+                                    <tr id="show" class="@Url.Content("odd Trang" + iTrang.ToString())">
+
+                                        <td>@item.TENTT</td>
+                                        <td><img src="@Url.Content("~/Content/HinhTinTuc/"+item.HINHTT)" width="100"></td>
+                                        <td>@item.MOTA</td>
+                                        <td>@item.NOIDUNG</td>
+                                        @if (item.TRANGTHAI)
+                                        {
+                                            <td class="invert" style="color:green;font:bold">Đã đăng</td>
+                                        }
+                                        else
+                                        {
+                                            <td class="invert" style="color:red;font:bold">Chưa đăng</td>
+                                        }
+                                        <td class="invert">
+                                            <abbr title="Sửa">
+                                                <button type="button" class="btn btn-info modal-change-password" onclick="location.href='@Url.Action("SuaTT", "Admin", new {id=item.MATT})'"><i class="fa fa-pen"></i></button>
+                                            </abbr>
+                                            @if (item.TRANGTHAI)
+                                            {
+                                                <abbr title="Đã đăng">
+                                                    <button type="button" class="btn btn-danger modal-change-tt" data-toggle="modal" data-target="#changeTTTT" data-account="@item.MATT" data-accountName="@item.TENTT"><i class="fa fa-unlock" aria-hidden="true"></i></button>
+                                                </abbr>
+                                            }
+                                            else
+                                            {
+                                                <abbr title="Chưa đăng">
+                                                    <button type="button" class="btn btn-danger modal-change-tt" data-toggle="modal" data-target="#changeTTTT" data-account="@item.MATT" data-accountName="@item.TENTT"><i class="fa fa-lock" aria-hidden="true"></i></button>
+                                                </abbr>
+                                            }
+
+                                        </td>
+                                    </tr>
+                                    iDem++;
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-12 col-md-5">
+                        <div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">@*Trang @i/@iTrang*@ </div>
+                    </div>
+                    <div class="col-sm-12 col-md-7">
+                        <div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate">
+                            <ul class="pagination">
+                                @for (int i = 1; i <= iTrang; i++)
+                                {
+                                    <li class="paginate_button page-item">
+                                        <a class="page-link linkTrang" data-SoTrang="@Url.Content("Trang" + i)">@i</a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Modal trạng thái đã đăng hay chưa đăng tin tức-->
+<div class="modal fade" id="changeTTTT" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="display:block">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Tắt / Mở trạng thái</h4>
+            </div>
+            <div class="modal-body">
+                <p>Xác nhận tắt / mở trạng thái này</p>
+            </div>
+
+            <!--lưu giá trị tài khoản-->
+            <input type="hidden" id="hiddenAccount" value="0" />
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success " id="btn-change-tt">
+                    Xác nhận
+                </button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*Phần phân trang admin*@
+<style>
+    .odd {
+        display: none;
+    }
+
+    .Trang1 {
+        display: block;
+        display: table-row;
+    }
+</style>
+@*Xử lý khi click vào thì hiển thị sp theo số trang tương ứng bằng jQuery*@
+<script>
+    $('.linkTrang').click(function () {
+        //cho tất cả các trang ẩn đi
+        $(".odd").hide();
+        //lây số trang từ thẻ a
+        var soTrang = $(this).attr("data-SoTrang");
+        //gọi class  thuộc soTrang đó thì hiển thị
+        $("." + soTrang).show();
+    });
+</script>

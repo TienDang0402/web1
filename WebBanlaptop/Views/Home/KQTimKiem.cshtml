@@ -1,0 +1,8 @@
+﻿@using WebBanlaptop.Models;
+@{
+    ViewBag.Title = "KQTimKiem";
+    Layout = "~/Views/Layout/_HomeLayout.cshtml";
+    IEnumerable<SANPHAM> listSP = (IEnumerable<SANPHAM>)ViewBag.lstSP;
+}
+@Html.Partial("~/Views/SanPham/showSPPartial.cshtml", listSP)
+

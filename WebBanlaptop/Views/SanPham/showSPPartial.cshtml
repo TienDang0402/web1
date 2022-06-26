@@ -1,0 +1,140 @@
+﻿@using WebBanlaptop.Models;
+@model IEnumerable<SANPHAM>
+
+@{
+    int iDem = 0; // đếm sl sp trên trang
+    int iSoLuongSPHienThi = 9;// sl sp hiển nthij trên trang
+    int iTrang = 1;//số trang
+    List<SANPHAM> lstsp = new List<SANPHAM>();
+    foreach (var item in Model)
+    {
+        lstsp.Add(item);
+    }
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.slim.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
+
+
+<!-- Breadcrumb Start -->
+<div class="container-fluid">
+    <div class="row px-xl-5">
+        <div class="col-12">
+            <nav class="breadcrumb bg-light mb-30">
+                <a class="breadcrumb-item text-dark" href="#">Home</a>
+                <a class="breadcrumb-item text-dark" href="#">Shop</a>
+                <span class="breadcrumb-item active">Shop List</span>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb End -->
+<!-- Shop Start -->
+<div class="container-fluid">
+    <div class="row px-xl-5">
+        <div class="col-lg-3 col-md-4">
+            <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Tìm theo nhà sản xuất</span></h5>
+            @Html.Action("showmauSP", "SanPham")
+        </div>
+        <div class="col-lg-9 col-md-8">
+            <div class="row pb-3">
+                <div class="col-12">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <div class="ml-2">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">Sắp xếp</button>
+
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    @* <button class="dropdown-item" href="#">Mới nhất</button>*@
+                                    <button type="button" class="dropdown-item" onclick="location.href='@Url.Action("SapXep", "SanPham", new { LoaiSX = "LowHigh",LoaiSP = lstsp})'">Giá thấp đến cao</button>
+                                    <button type="button" class="dropdown-item" onclick="location.href='@Url.Action("SapXep", "SanPham", new { LoaiSX = "HighLow",LoaiSP = lstsp})'">Giá cao đến thấp</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @foreach (var item in Model)
+                {
+                    if (iDem % iSoLuongSPHienThi == 0 && iDem != 0)
+                    {
+                        iTrang++;
+                    }
+                    if (item.TRANGTHAI)
+                    {
+                    <div id="show" class="@Url.Content("col-lg-4 col-md-6 col-sm-6 pb-1 Trang" + iTrang.ToString())">
+                        @*Phân SP theo so trang*@
+                        <div class="product-item bg-light mb-4">
+                            <div class="product-img position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="@Url.Content("~/Content/HinhAnhSP/" + item.HINHANH)" alt="">
+                                <div class="product-action">
+                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center py-4">
+                                <a class="h6 text-decoration-none text-truncate" href="@Url.Action("chiTietSP", "SanPham", new { @id = item.MASP })">@item.TENSP</a>
+                                <div class="d-flex align-items-center justify-content-center mt-2">
+                                    <h5>@item.DONGIA.Value.ToString("#,000")</h5><h6 class="text-muted ml-2"></h6>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center mb-1">
+                                    <small class="fa fa-star text-primary mr-1"></small>
+                                    <small class="fa fa-star text-primary mr-1"></small>
+                                    <small class="fa fa-star text-primary mr-1"></small>
+                                    <small class="fa fa-star text-primary mr-1"></small>
+                                    <small class="fa fa-star text-primary mr-1"></small>
+                                    <small>(99)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    }
+                    iDem++;
+                }
+                <div class="col-12">
+                    <nav>
+                        <ul class="pagination justify-content-center">
+
+                            @for (int i = 1; i <= iTrang; i++)
+                            {
+                                <li class="page-item"><a class="page-link linkTrang" data-SoTrang="@Url.Content("Trang"+i)">@i</a></li>
+
+                            }
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Shop Product End -->
+    </div>
+</div>
+<!-- Shop End -->
+<!--Style cho ẩn hết các sp và chỉ cho phép sp trang 1 hiện lên-->
+<style>
+    .pb-1 {
+        display: none;
+    }
+
+    .Trang1 {
+        display: block;
+    }
+</style>
+@*Xử lý khi click vào thì hiển thị sp theo số trang tương ứng bằng jQuery*@
+<script>
+    $('.linkTrang').click(function () {
+        //cho tất cả các trang ẩn đi
+        $(".pb-1").hide();
+        //lây số trang từ thẻ a
+        var soTrang = $(this).attr("data-SoTrang");
+        //gọi class thuộc soTrang đó thì hiển thị
+        $("." + soTrang).show();
+        $(".page-item").css({
+            "z - index": "3",
+            "color": "#fff",
+            "background - color": "#FFD333",
+            "border - color": "#FFD333"
+        });
+    });
+</script>
+

@@ -1,0 +1,180 @@
+﻿@using WebBanlaptop.Models;
+@{
+    ViewBag.Title = "ListSanPham";
+    Layout = "~/Views/Layout/_AdminLayout.cshtml";
+    IEnumerable<SANPHAM> listSanPham = (IEnumerable<SANPHAM>)ViewBag.lstSP;
+    int iDem = 0; // đếm sl sp trên trang
+    int iSoLuongSPHienThi = 10;// sl nv hiển nthij trên trang
+    int iTrang = 1;//số trang
+
+    <script src="~/Scripts/admin.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.slim.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
+
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Danh sách sản phẩm</h1>
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <button type="button" class="btn btn-info create-admin" onclick="location.href='@Url.Action("ThemMoiSP", "Admin")'">Thêm mới sản phẩm</button>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                    <div class="col-sm-12">
+                        <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th rowspan="1" colspan="1">Số thứ tự</th>
+                                    <th rowspan="1" colspan="1">Tên sản phẩm</th>
+                                    <th rowspan="1" colspan="1">Đơn giá</th>
+                                    <th rowspan="1" colspan="1">Hình sản phẩm</th>
+                                    <th rowspan="1" colspan="1">Tên loại sản phẩm</th>
+                                    <th rowspan="1" colspan="1">Tên nhà sản xuất</th>
+                                    <th rowspan="1" colspan="1">Sản phẩm mới</th>
+                                    <th rowspan="1" colspan="1">Sản phẩm nổi bật</th>
+                                    <th rowspan="1" colspan="1">Cấu hình</th>
+                                    <th rowspan="1" colspan="1">Mô tả</th>
+                                    <th rowspan="1" colspan="1">Trạng thái</th>
+                                    <th rowspan="1" colspan="1">Chức năng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in listSanPham)
+                                {
+                                    if (iDem % iSoLuongSPHienThi == 0 && iDem != 0)
+                                    {
+                                        iTrang++;
+                                    }
+                                    <tr id="show" class="@Url.Content("odd Trang" + iTrang.ToString())">
+
+                                        <td>@item.MASP</td>
+                                        <td>@item.TENSP</td>
+                                        <td>@item.DONGIA.Value.ToString("#,000")</td>
+                                        <td><img src="@Url.Content("~/Content/HinhAnhSP/"+item.HINHANH)" width="100"></td>
+                                        <td>@item.tenLSP</td>
+                                        <td>@item.tenNSX</td>
+                                        <td>@item.SANPHAMMOI</td>
+                                        <td>@item.SPNOIBAT</td>
+                                        <td>@item.CAUHINH</td>
+                                        <td>@item.MOTA</td>
+                                        @if (item.TRANGTHAI)
+                                        {
+                                            <td class="invert" style="color:green;font:bold">Còn hàng</td>
+                                        }
+                                        else
+                                        {
+                                            <td class="invert" style="color:red;font:bold">Hết hàng</td>
+                                        }
+                                        <td class="invert">
+                                            <abbr title="Sửa">
+                                                <button type="button" class="btn btn-info modal-change-password" onclick="location.href='@Url.Action("SuaSP", "Admin", new {id = item.MASP})'"><i class="fa fa-pen"></i></button>
+                                            </abbr>
+                                            <abbr title="Xem chi tiết sản phẩm">
+                                                <button type="button" class="btn btn-info modal-change-password" onclick="location.href='@Url.Action("ChiTietSanPham", "Admin", new {id = item.MASP})'"><i class="fa fa-eye"></i></button>
+                                            </abbr>
+                                            @if (item.TRANGTHAI)
+                                            {
+                                                <abbr title="Hết hàng">
+                                                    <button type="button" class="btn btn-danger modal-change-sp" data-toggle="modal" data-target="#changeTTSP" data-account="@item.MASP" data-accountName="@item.TENSP"><i class="fa fa-lock" aria-hidden="true"></i></button>
+                                                </abbr>
+                                            }
+                                            else
+                                            {
+                                                <abbr title="Còn hàng">
+                                                    <button type="button" class="btn btn-danger modal-change-sp" data-toggle="modal" data-target="#changeTTSP" data-account="@item.MASP" data-accountName="@item.TENSP"><i class="fa fa-unlock" aria-hidden="true"></i></button>
+                                                </abbr>
+                                            }
+
+                                        </td>
+                                    </tr>
+                                    iDem++;
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-12 col-md-5">
+                        <div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">@*Trang @i/@iTrang*@ </div>
+                    </div>
+                    <div class="col-sm-12 col-md-7">
+                        <div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate">
+                            <ul class="pagination">
+                                @for (int i = 1; i <= iTrang; i++)
+                                {
+                                    <li class="paginate_button page-item">
+                                        <a class="page-link linkTrang" data-SoTrang="@Url.Content("Trang" + i)">@i</a>
+                                    </li>
+                                }
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Modal-->
+<div class="modal fade" id="changeTTSP" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="display:block">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Tắt / Mở trạng thái</h4>
+            </div>
+            <div class="modal-body">
+                <p>Xác nhận tắt / mở trạng thái này</p>
+            </div>
+
+            <!--lưu giá trị tài khoản-->
+            <input type="hidden" id="hiddenAccount" value="0" />
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="btn-change-sp">
+                    Xác nhận
+                </button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*Phần phân trang admin*@
+<style>
+    .odd {
+        display: none;
+    }
+
+    .Trang1 {
+        display: block;
+        display: table-row;
+    }
+</style>
+@*Xử lý khi click vào thì hiển thị sp theo số trang tương ứng bằng jQuery*@
+<script>
+    $('.linkTrang').click(function () {
+        //cho tất cả các trang ẩn đi
+        $(".odd").hide();
+        //lây số trang từ thẻ a
+        var soTrang = $(this).attr("data-SoTrang");
+        //gọi class  thuộc soTrang đó thì hiển thị
+        $("." + soTrang).show();
+    });
+</script>
+

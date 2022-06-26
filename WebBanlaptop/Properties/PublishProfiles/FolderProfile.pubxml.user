@@ -1,0 +1,1440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\duyle\OneDrive\Máy tính\publishTest</_PublishTargetUrl>
+    <History>True|2022-06-07T16:55:14.2466261Z;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>09/10/2013 16:29:20</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>09/10/2013 16:29:20</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>04/17/2020 03:38:42</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>04/17/2020 03:38:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>09/05/2018 16:10:50</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/25/2012 11:48:56</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>04/22/2019 01:06:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>08/08/2018 12:18:12</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>08/08/2018 12:09:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe.config">
+      <publishTime>08/08/2018 12:18:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>08/08/2018 12:09:56</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>08/08/2018 12:09:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>12/05/2017 09:36:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>12/05/2017 09:36:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Managed.Core.targets">
+      <publishTime>08/08/2018 12:09:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>08/08/2018 12:09:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Win32.Primitives.dll">
+      <publishTime>11/05/2016 18:55:32</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>11/05/2016 18:55:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>05/16/2018 03:29:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Console.dll">
+      <publishTime>11/05/2016 18:55:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.DiagnosticSource.dll">
+      <publishTime>11/05/2016 18:55:52</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.FileVersionInfo.dll">
+      <publishTime>11/05/2016 18:55:56</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>11/05/2016 18:55:52</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Globalization.Calendars.dll">
+      <publishTime>11/05/2016 18:56:02</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.dll">
+      <publishTime>11/05/2016 18:56:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.ZipFile.dll">
+      <publishTime>11/05/2016 18:56:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>11/05/2016 18:56:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>11/05/2016 18:56:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Net.Http.dll">
+      <publishTime>11/05/2016 18:56:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Net.Sockets.dll">
+      <publishTime>11/05/2016 18:56:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>05/16/2018 03:29:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Runtime.InteropServices.RuntimeInformation.dll">
+      <publishTime>11/05/2016 18:57:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Algorithms.dll">
+      <publishTime>11/05/2016 18:57:14</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Encoding.dll">
+      <publishTime>11/05/2016 18:57:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Primitives.dll">
+      <publishTime>11/05/2016 18:57:18</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.X509Certificates.dll">
+      <publishTime>11/05/2016 18:57:18</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Text.Encoding.CodePages.dll">
+      <publishTime>11/05/2016 18:57:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Threading.Tasks.Extensions.dll">
+      <publishTime>11/05/2016 18:57:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.ValueTuple.dll">
+      <publishTime>11/05/2016 18:57:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.ReaderWriter.dll">
+      <publishTime>11/05/2016 18:57:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XmlDocument.dll">
+      <publishTime>11/05/2016 18:57:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.dll">
+      <publishTime>11/05/2016 18:57:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.XDocument.dll">
+      <publishTime>11/05/2016 18:57:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>08/08/2018 12:18:18</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>08/08/2018 12:09:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>08/08/2018 12:18:16</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>11/28/2018 12:59:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/11/2014 15:26:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>11/28/2018 13:00:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/WebBanlaptop.dll">
+      <publishTime>06/07/2022 23:55:11</publishTime>
+    </File>
+    <File Include="bin/WebBanlaptop.pdb">
+      <publishTime>06/07/2022 23:55:11</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>01/23/2014 13:57:34</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>05/28/2022 21:48:08</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css.map">
+      <publishTime>05/28/2022 21:48:08</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>05/28/2022 21:48:08</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css.map">
+      <publishTime>05/28/2022 21:48:08</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>05/28/2022 21:48:08</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>05/28/2022 21:48:08</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>05/28/2022 21:48:08</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css.map">
+      <publishTime>05/28/2022 21:48:08</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap-grid.css">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap-grid.min.css">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap-reboot.css">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap-reboot.min.css">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap.css">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap.min.css">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/css/style.css">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/css/style.min.css">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/acer-aprise-a315-57g-32qp-i3.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/acer-aspire-3-a315-57g-573f-i5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/acer-aspire-7-gaming-a715-42g-r05g-r5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/acer-aspire-7-gaming-a715-42g-r4xx-r5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/acer-aspire-7-gaming-a715-75g-58u4-i5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/acer-aspire-a514-54-511g-i5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/acer-aspire-a514-54-5127-i5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/acer-nitro-5-an515-45-r9sc-r7.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/acer-nitro-5-gaming-an515-45-r6ev-r5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/acer-nitro-5-gaming-an515-57-54mv-i5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/acer-nitro-5-gaming-an515-57-5831-i5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/acer-nitro-5-gaming-an515-57-71vv-i7.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/acer-nitro-5-tiger-an515-58-52sp-i5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/acer-swift-3-sf314-511-55qe-i5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/acer-swift-x-sfx16-51g-516q-i5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/acer-travelmate-tmp215-53-50cp-i5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/apple-macbook-air-m1-2020.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/asus-expertbook-b1400ceae-i5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/asus-expertbook-b1500ceae-i5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/asus-expertbook-b9400cea-i5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/asus-gaming-rog-flow-z13-gz301z-i7.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/asus-rog-strix-gaming-g513ih-r7.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/asus-rog-zephyrus-gaming-g14-ga401qh-r7.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/asus-tuf-gaming-fa707rc-r7.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/asus-tuf-gaming-fx507zc-i7.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/asus-tuf-gaming-fx516pm-i7.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/asus-vivobook-14-oled-m3401qa-r7.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/asus-vivobook-15-x1502za-i5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/asus-vivobook-a515ep-i5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/asus-vivobook-pro-14x-oled-m7400qc-r5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/asus-vivobook-pro-15-oled-k3500p-i5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/asus-vivobook-s433ea-i5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/asus-vivobook-s533eq-i5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/asus-zenbook-14x-oled-um5401qa-r5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/asus-zenbook-duo-ux482ea-i5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/asus-zenbook-flip-ux363ea-i5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/asus-zenbook-ux325ea-i5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/asus-zenbook-ux325ea-i7.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/asus-zenbook-ux425e-i5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/asus-zenbook-ux425ea-i5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/asus-zenbook-ux482ea-i5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/dell-gaming-alienware-m15-r6.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/dell-gaming-g15-5511-i7.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/dell-gaming-g15-5515-r5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/dell-gaming-g15-5515-r7.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/dell-inspiron-14-5415-r7.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/dell-latitude-3520-i7.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/dell-vostro-3400-i7.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/dell-vostro-3510-i5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/dell-xps-13-9310-i5.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/dell-xps-17-9710-i7.jpg">
+      <publishTime>06/03/2022 22:33:01</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/gaming-1.jpg">
+      <publishTime>06/03/2022 22:33:03</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/gaming-2.jpg">
+      <publishTime>06/03/2022 22:33:04</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/gaming-3.jpg">
+      <publishTime>06/03/2022 22:33:04</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/gaming-4.jpg">
+      <publishTime>06/03/2022 22:33:05</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/hp-envy-13-ba1535tu-i7.jpg">
+      <publishTime>06/03/2022 22:33:05</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/hp-envy-13-ba1536tu-i5.jpg">
+      <publishTime>06/03/2022 22:33:05</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/hp-envy-x360-13-bd0530tu-i5.jpg">
+      <publishTime>06/03/2022 22:33:05</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/hp-envy-x360-13-bd0531tu-i5.jpg">
+      <publishTime>06/03/2022 22:33:05</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/hp-envy-x360-convert-13-ay1056au-r7.jpg">
+      <publishTime>06/03/2022 22:33:05</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/hp-envy-x360-convert-13-ay1057au-r5.jpg">
+      <publishTime>06/03/2022 22:33:05</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/hp-g8-245-r3.jpg">
+      <publishTime>06/03/2022 22:33:05</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/hp-gaming-victus-16-d0198tx-i7.jpg">
+      <publishTime>06/03/2022 22:33:05</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/hp-gaming-victus-16-d0199tx-i7.jpg">
+      <publishTime>06/03/2022 22:33:05</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/hp-gaming-victus-16-d0200tx-i7.jpg">
+      <publishTime>06/03/2022 22:33:05</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/hp-gaming-victus-16-d0202tx-i5.jpg">
+      <publishTime>06/03/2022 22:33:05</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/hp-gaming-victus-16-d0204tx-i5.jpg">
+      <publishTime>06/03/2022 22:33:05</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/hp-gaming-victus-16-d0298tx-i5.jpg">
+      <publishTime>06/03/2022 22:33:05</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/hp-gaming-victus-16-e0170ax-r7.jpg">
+      <publishTime>06/03/2022 22:33:05</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/hp-gaming-victus-16-e0175ax-r5.jpg">
+      <publishTime>06/03/2022 22:33:05</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/hp-gaming-victus-16-e0179ax-r5.jpg">
+      <publishTime>06/03/2022 22:33:05</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/hp-pavilion-x360-14-dy0075tu-i7.jpg">
+      <publishTime>06/03/2022 22:33:05</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/hp-probook-440-g8-i5.jpg">
+      <publishTime>06/03/2022 22:33:05</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/hp-zbook-firefly-14-g8-i5.jpg">
+      <publishTime>06/03/2022 22:33:05</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/icon-ltcaocap.jpg">
+      <publishTime>06/03/2022 22:33:05</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/icon-ltdohoa.jpeg">
+      <publishTime>06/03/2022 22:33:06</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/icon-ltgaming.png">
+      <publishTime>06/03/2022 22:33:06</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/icon-ltmongnhe.png">
+      <publishTime>06/03/2022 22:33:07</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/icon-ltvanphong.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/icon-macbook.png">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/lenovo-gaming-legion-5-15ach6-r5.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/lenovo-gaming-legion-5-15ach6-r7.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/lenovo-gaming-legion-5-15ith6-i7.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/lenovo-ideapad-5-pro-14itl6-i7.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/lenovo-ideapad-5-pro-16ihu6-i5.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/lenovo-ideapad-gaming-3-15ihu6-i5.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/lenovo-thinkbook-14p-g2-ach-r5.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/lenovo-thinkbook-14s-g2-itl-i7.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/lenovo-thinkbook-14s-yoga-itl-i7.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/lenovo-yoga-duet-7-13itl6-i7.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/lenovo-yoga-slim-7-14itl05-i7.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/lenovo-yoga-slim-7-carbon-13itl5-i5.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/lenovo-yoga-slim-7-carbon-13itl5-i7.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/lenovo-yoga-slim-7-pro-14ihu5-i5.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/macbook-air-m1-2020.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/macbook-pro-14-m1-max-2021-24-core.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/macbook-pro-14-m1-pro-2021-16-core.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/macbook-pro-16-m1-pro-2021.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/macbook-pro-m1-2020.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/msi-creator-z16-a12uet-i7.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/msi-creator-z16p-b12ugst-i7.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/msi-gaming-ge66-raider-11ug-i7.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/msi-gaming-gf63-thin-10sc-i7.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/msi-gaming-gs66-stealth-11ug-i7.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/msi-gaming-leopard-gp76-11ug-i7.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/msi-gaming-modern-14-b11sbu-i5.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/msi-gaming-pulse-gl66-11udk-i7.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/msi-gaming-vector-gp66-12ugs-i7.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/msi-katana-gf76-11ue-i7.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/msi-modern-14-b11mou-i3.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/msi-modern-14-b11mou-i7.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/msi-modern-14-b5m-r5.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/msi-modern-15-a11mu-i5.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/msi-modern-15-a5m-r5.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/HinhAnhSP/msi-prestige-14-a11sc-i7.jpg">
+      <publishTime>06/03/2022 22:33:08</publishTime>
+    </File>
+    <File Include="Content/img/carousel-1.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/carousel-2.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/carousel-3.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/cat-1.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/cat-2.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/cat-3.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/cat-4.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/offer-1.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/offer-2.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/payments.png">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/product-1.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/product-2.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/product-3.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/product-4.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/product-5.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/product-6.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/product-7.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/product-8.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/product-9.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/user.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/vendor-1.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/vendor-2.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/vendor-3.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/vendor-4.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/vendor-5.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/vendor-6.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/vendor-7.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/img/vendor-8.jpg">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/index.html">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/js/main.js">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/lib/animate/animate.min.css">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/lib/easing/easing.js">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/lib/easing/easing.min.js">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/lib/owlcarousel/assets/ajax-loader.gif">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/lib/owlcarousel/assets/owl.carousel.css">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/lib/owlcarousel/assets/owl.carousel.min.css">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/lib/owlcarousel/assets/owl.theme.default.css">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/lib/owlcarousel/assets/owl.theme.default.min.css">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/lib/owlcarousel/assets/owl.theme.green.css">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/lib/owlcarousel/assets/owl.theme.green.min.css">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/lib/owlcarousel/assets/owl.video.play.png">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/lib/owlcarousel/LICENSE">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/lib/owlcarousel/owl.carousel.js">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/lib/owlcarousel/owl.carousel.min.js">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/mail/contact.js">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/mail/contact.php">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/mail/jqBootstrapValidation.min.js">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/bootstrap-grid.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/bootstrap-reboot.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/bootstrap.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_alert.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_background-variant.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_badge.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_border-radius.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_box-shadow.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_breakpoints.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_buttons.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_caret.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_clearfix.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_deprecate.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_float.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_forms.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_gradients.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_grid-framework.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_grid.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_hover.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_image.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_list-group.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_lists.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_nav-divider.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_pagination.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_reset-text.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_resize.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_screen-reader.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_size.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_table-row.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_text-emphasis.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_text-hide.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_text-truncate.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_transition.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/mixins/_visibility.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/utilities/_align.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/utilities/_background.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/utilities/_borders.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/utilities/_clearfix.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/utilities/_display.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/utilities/_embed.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/utilities/_flex.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/utilities/_float.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/utilities/_interactions.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/utilities/_overflow.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/utilities/_position.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/utilities/_screenreaders.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/utilities/_shadows.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/utilities/_sizing.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/utilities/_spacing.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/utilities/_stretched-link.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/utilities/_text.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/utilities/_visibility.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/vendor/_rfs.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_alert.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_badge.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_breadcrumb.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_button-group.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_buttons.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_card.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_carousel.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_close.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_code.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_custom-forms.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_dropdown.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_forms.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_functions.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_grid.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_images.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_input-group.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_jumbotron.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_list-group.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_media.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_mixins.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_modal.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_nav.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_navbar.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_pagination.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_popover.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_print.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_progress.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_reboot.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_root.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_spinners.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_tables.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_toasts.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_tooltip.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_transitions.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_type.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_utilities.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/bootstrap/scss/_variables.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/scss/style.scss">
+      <publishTime>05/28/2022 21:49:24</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>05/28/2022 21:48:04</publishTime>
+    </File>
+    <File Include="Content/styleLogin/css/main.css">
+      <publishTime>06/07/2022 22:49:03</publishTime>
+    </File>
+    <File Include="Content/styleLogin/css/util.css">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/css/font-awesome.css">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/HELP-US-OUT.txt">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/less/animated.less">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/less/bordered-pulled.less">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/less/core.less">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/less/fixed-width.less">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/less/font-awesome.less">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/less/icons.less">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/less/larger.less">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/less/list.less">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/less/mixins.less">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/less/path.less">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/less/rotated-flipped.less">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/less/screen-reader.less">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/less/stacked.less">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/less/variables.less">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/scss/font-awesome.scss">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/scss/_animated.scss">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/scss/_core.scss">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/scss/_fixed-width.scss">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/scss/_icons.scss">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/scss/_larger.scss">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/scss/_list.scss">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/scss/_mixins.scss">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/scss/_path.scss">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/scss/_screen-reader.scss">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/scss/_stacked.scss">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/font-awesome-4.7.0/scss/_variables.scss">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/montserrat/Montserrat-Black.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/montserrat/Montserrat-BlackItalic.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/montserrat/Montserrat-Bold.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/montserrat/Montserrat-BoldItalic.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/montserrat/Montserrat-ExtraBold.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/montserrat/Montserrat-ExtraBoldItalic.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/montserrat/Montserrat-ExtraLight.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/montserrat/Montserrat-ExtraLightItalic.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/montserrat/Montserrat-Italic.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/montserrat/Montserrat-Light.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/montserrat/Montserrat-LightItalic.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/montserrat/Montserrat-Medium.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/montserrat/Montserrat-MediumItalic.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/montserrat/Montserrat-Regular.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/montserrat/Montserrat-SemiBold.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/montserrat/Montserrat-SemiBoldItalic.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/montserrat/Montserrat-Thin.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/montserrat/Montserrat-ThinItalic.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/montserrat/OFL.txt">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/poppins/Poppins-Black.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/poppins/Poppins-BlackItalic.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/poppins/Poppins-Bold.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/poppins/Poppins-BoldItalic.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/poppins/Poppins-ExtraBold.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/poppins/Poppins-ExtraBoldItalic.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/poppins/Poppins-ExtraLight.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/poppins/Poppins-ExtraLightItalic.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/poppins/Poppins-Italic.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/poppins/Poppins-Light.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/poppins/Poppins-LightItalic.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/poppins/Poppins-Medium.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/poppins/Poppins-MediumItalic.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/poppins/Poppins-Regular.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/poppins/Poppins-SemiBold.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/poppins/Poppins-SemiBoldItalic.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/poppins/Poppins-Thin.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/fonts/poppins/Poppins-ThinItalic.ttf">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/images/icons/favicon.ico">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/images/img-01.png">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/js/main.js">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/vendor/animate/animate.css">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/vendor/bootstrap/css/bootstrap-grid.css">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/vendor/bootstrap/css/bootstrap-grid.css.map">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/vendor/bootstrap/css/bootstrap-grid.min.css">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/vendor/bootstrap/css/bootstrap-grid.min.css.map">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/vendor/bootstrap/css/bootstrap-reboot.css">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/vendor/bootstrap/css/bootstrap-reboot.css.map">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/vendor/bootstrap/css/bootstrap-reboot.min.css">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/vendor/bootstrap/css/bootstrap-reboot.min.css.map">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/vendor/bootstrap/css/bootstrap.css">
+      <publishTime>06/07/2022 22:06:26</publishTime>
+    </File>
+    <File Include="Content/styleLogin/vendor/bootstrap/css/bootstrap.css.map">
+      <publishTime>06/07/2022 22:06:27</publishTime>
+    </File>
+    <File Include="Content/styleLogin/vendor/bootstrap/css/bootstrap.min.css">
+      <publishTime>06/07/2022 22:06:27</publishTime>
+    </File>
+    <File Include="Content/styleLogin/vendor/bootstrap/css/bootstrap.min.css.map">
+      <publishTime>06/07/2022 22:06:27</publishTime>
+    </File>
+    <File Include="Content/styleLogin/vendor/bootstrap/js/bootstrap.js">
+      <publishTime>06/07/2022 22:06:27</publishTime>
+    </File>
+    <File Include="Content/styleLogin/vendor/bootstrap/js/bootstrap.min.js">
+      <publishTime>06/07/2022 22:06:27</publishTime>
+    </File>
+    <File Include="Content/styleLogin/vendor/bootstrap/js/popper.js">
+      <publishTime>06/07/2022 22:06:27</publishTime>
+    </File>
+    <File Include="Content/styleLogin/vendor/bootstrap/js/popper.min.js">
+      <publishTime>06/07/2022 22:06:27</publishTime>
+    </File>
+    <File Include="Content/styleLogin/vendor/bootstrap/js/tooltip.js">
+      <publishTime>06/07/2022 22:06:27</publishTime>
+    </File>
+    <File Include="Content/styleLogin/vendor/css-hamburgers/hamburgers.css">
+      <publishTime>06/07/2022 22:06:27</publishTime>
+    </File>
+    <File Include="Content/styleLogin/vendor/css-hamburgers/hamburgers.min.css">
+      <publishTime>06/07/2022 22:06:27</publishTime>
+    </File>
+    <File Include="Content/styleLogin/vendor/jquery/jquery-3.2.1.min.js">
+      <publishTime>06/07/2022 22:06:27</publishTime>
+    </File>
+    <File Include="Content/styleLogin/vendor/select2/select2.css">
+      <publishTime>06/07/2022 22:06:27</publishTime>
+    </File>
+    <File Include="Content/styleLogin/vendor/select2/select2.js">
+      <publishTime>06/07/2022 22:06:27</publishTime>
+    </File>
+    <File Include="Content/styleLogin/vendor/select2/select2.min.css">
+      <publishTime>06/07/2022 22:06:27</publishTime>
+    </File>
+    <File Include="Content/styleLogin/vendor/select2/select2.min.js">
+      <publishTime>06/07/2022 22:06:27</publishTime>
+    </File>
+    <File Include="Content/styleLogin/vendor/tilt/tilt.jquery.min.js">
+      <publishTime>06/07/2022 22:06:27</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>05/28/2022 21:48:04</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>05/28/2022 21:48:08</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>05/28/2022 21:48:08</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>05/28/2022 21:48:08</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>05/28/2022 21:48:08</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>05/28/2022 21:48:08</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>05/28/2022 21:48:04</publishTime>
+    </File>
+    <File Include="Models/QLBanLaptopModel.edmx.diagram">
+      <publishTime>05/28/2022 23:04:42</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>05/28/2022 21:48:08</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>05/28/2022 21:48:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.js">
+      <publishTime>05/28/2022 21:48:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.min.js">
+      <publishTime>05/28/2022 21:48:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.min.map">
+      <publishTime>05/28/2022 21:48:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.js">
+      <publishTime>05/28/2022 21:48:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.min.js">
+      <publishTime>05/28/2022 21:48:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.min.map">
+      <publishTime>05/28/2022 21:48:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>05/28/2022 21:48:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>05/28/2022 21:48:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>05/28/2022 21:48:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>05/28/2022 21:48:11</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.8.3.js">
+      <publishTime>05/28/2022 21:48:10</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>06/04/2022 21:29:53</publishTime>
+    </File>
+    <File Include="Views/Home/navbarPartial.cshtml">
+      <publishTime>06/04/2022 22:45:10</publishTime>
+    </File>
+    <File Include="Views/Home/showUser.cshtml">
+      <publishTime>06/07/2022 23:26:11</publishTime>
+    </File>
+    <File Include="Views/Layout/_HomeLayout.cshtml">
+      <publishTime>06/07/2022 23:23:29</publishTime>
+    </File>
+    <File Include="Views/SanPham/chiTietSP.cshtml">
+      <publishTime>06/03/2022 00:58:13</publishTime>
+    </File>
+    <File Include="Views/SanPham/danhMucSP.cshtml">
+      <publishTime>06/03/2022 20:32:54</publishTime>
+    </File>
+    <File Include="Views/SanPham/showAllSP.cshtml">
+      <publishTime>05/29/2022 23:02:41</publishTime>
+    </File>
+    <File Include="Views/SanPham/showSPNoiBat.cshtml">
+      <publishTime>05/30/2022 00:11:24</publishTime>
+    </File>
+    <File Include="Views/SanPham/showSPPartial.cshtml">
+      <publishTime>06/05/2022 03:37:33</publishTime>
+    </File>
+    <File Include="Views/SanPham/showSPTheoLoai.cshtml">
+      <publishTime>05/29/2022 22:36:27</publishTime>
+    </File>
+    <File Include="Views/SanPham/showSPTheoNSX.cshtml">
+      <publishTime>05/29/2022 22:36:29</publishTime>
+    </File>
+    <File Include="Views/User/Login.cshtml">
+      <publishTime>06/07/2022 22:49:40</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>05/28/2022 21:48:04</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/07/2022 23:55:12</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,147 @@
+﻿@using WebBanlaptop.Models;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<HOADON>
+@{
+    ViewBag.Title = "ListDonDatHang";
+    Layout = "~/Views/Layout/_AdminLayout.cshtml";
+
+    IEnumerable<HOADON> listDonDatHang = (IEnumerable<HOADON>)ViewBag.lstDDH;
+    int iDem = 0; // đếm sl sp trên trang
+    int iSoLuongSPHienThi = 5;// sl nv hiển nthij trên trang
+    int iTrang = 1;//số trang
+
+    <script src="~/Scripts/admin.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.slim.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
+
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Danh sách đơn đặt hàng</h1>
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        
+        <div class="card-body">
+            <div class="table-responsive">
+                <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                    <div class="col-sm-12">
+                        <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                            <thead>
+                                <tr>
+
+                                    <th rowspan="1" colspan="1">Ngày lập hóa đơn</th>
+                                    <th rowspan="1" colspan="1">Ngày giao hóa đơn</th>
+                                    <th rowspan="1" colspan="1">Tổng tiền</th>
+                                    <th rowspan="1" colspan="1">Trạng thái</th>
+                                    <th rowspan="1" colspan="1">Tên khách hàng</th>
+                                    <th rowspan="1" colspan="1">Xem chi tiết đơn đặt hàng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in listDonDatHang)
+                                {
+                                    if (iDem % iSoLuongSPHienThi == 0 && iDem != 0)
+                                    {
+                                        iTrang++;
+                                    }
+                                    <tr id="show" class="@Url.Content("odd Trang" + iTrang.ToString())">
+
+
+                                        <td>@item.NGAYLAP</td>
+                                        <td>@item.NGAYGIAO</td>
+                                        <td>@item.TONGTIEN</td>
+                                        <td>@item.TRANGTHAI</td>
+                                        <td>@item.tenKH</td>
+                                        <td class="invert">
+                                            
+                                            <abbr title="Chi tiết đơn đặt hàng">
+                                                <button type="button" class="btn btn-info modal-change-password" onclick="location.href='@Url.Action("ChiTietDonDatHang", "Admin",new { id = item.MANV, type=true})'"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                            </abbr>
+                                        </td>
+                                    </tr>
+                                    iDem++;
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-12 col-md-5">
+                        <div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">@*Trang @i/@iTrang*@ </div>
+                    </div>
+                    <div class="col-sm-12 col-md-7">
+                        <div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate">
+                            <ul class="pagination">
+                                @for (int i = 1; i <= iTrang; i++)
+                                {
+                                    <li class="paginate_button page-item">
+                                        <a class="page-link linkTrang" data-SoTrang="@Url.Content("Trang" + i)">@i</a>
+                                    </li>
+                                }
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Modal khóa tài khoản-->
+<div class="modal fade" id="deleteProduct" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="display:block">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Xóa sản phẩm</h4>
+            </div>
+            <div class="modal-body">
+                <p>Xác nhận xóa sản phẩm này</p>
+            </div>
+
+            <!--lưu giá trị tài khoản-->
+            <input type="hidden" id="hiddenAccount" value="0" />
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success " id="btn-delete-product">
+                    Xác nhận
+                </button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*Phần phân trang admin*@
+<style>
+    .odd {
+        display: none;
+    }
+
+    .Trang1 {
+        display: block;
+        display: table-row;
+    }
+</style>
+@*Xử lý khi click vào thì hiển thị sp theo số trang tương ứng bằng jQuery*@
+<script>
+    $('.linkTrang').click(function () {
+        //cho tất cả các trang ẩn đi
+        $(".odd").hide();
+        //lây số trang từ thẻ a
+        var soTrang = $(this).attr("data-SoTrang");
+        //gọi class  thuộc soTrang đó thì hiển thị
+        $("." + soTrang).show();
+    });
+</script>
+
+
+

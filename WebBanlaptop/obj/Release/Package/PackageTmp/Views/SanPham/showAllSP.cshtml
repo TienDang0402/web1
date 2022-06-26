@@ -1,0 +1,9 @@
+﻿@using WebBanlaptop.Models;
+@{
+    ViewBag.Title = "showAllSP";
+    Layout = "~/Views/Layout/_HomeLayout.cshtml";
+    IEnumerable<SANPHAM> listSP = (IEnumerable<SANPHAM>)ViewBag.lstSP;
+}
+@Html.Partial("showSPPartial", listSP)
+
+

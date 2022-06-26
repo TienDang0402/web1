@@ -1,0 +1,40 @@
+﻿@using WebBanlaptop.Models;
+@model IEnumerable<NHASANXUAT>
+
+@{
+
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+
+    <script src="~/Scripts/jquery-3.4.1.slim.min.js"></script>
+
+
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+
+}
+
+<div class="bg-light p-4 mb-30">
+    <form>
+        @foreach (var item in Model)
+        {
+            if (item != null)
+            {
+                <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                    @*<input type="checkbox" class="custom-control-input" checked="" id="price-all">
+                        <label  for="price-all">All Price</label>*@
+
+                    <a href="@Url.Action("showSPTheoNSX1",new {@MaLSP = item.MANSX})" class="dropdown-item">@item.TENNSX</a>
+                    <hr />
+                </div>
+            }
+
+        }
+
+    </form>
+</div>
+
+

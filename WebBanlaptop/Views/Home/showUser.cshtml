@@ -1,0 +1,12 @@
+﻿@using WebBanlaptop.Models;
+@model KHACHHANG
+@{
+    KHACHHANG kh = (KHACHHANG)Session["User"];
+    var item = kh;
+    if (kh.TENKH == null)
+    { item.TENKH = kh.USERNAME; }
+    else { item.TENKH = kh.TENKH; }
+}
+
+
+<button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">Chào @item.TENKH</button>

@@ -1,0 +1,9 @@
+﻿@using WebBanlaptop.Models;
+@model IEnumerable<SANPHAM>
+@{
+    ViewBag.Title = "SapXep";
+    Layout = "~/Views/Layout/_HomeLayout.cshtml";
+
+}
+@Html.Partial("showSPPartial", Model)
+

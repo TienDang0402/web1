@@ -1,0 +1,90 @@
+﻿@model WebBanlaptop.Models.TINTUC
+
+@{
+    ViewBag.Title = "ThemTinTuc";
+    Layout = "~/Views/Layout/_AdminLayout.cshtml";
+}
+<script src="~/Scripts/tinymce/tinymce.min.js"></script>
+
+<script>
+    tinymce.init({
+        selector: 'textarea',
+        auto_focus: 'element1',
+        force_br_newlines: false,
+        force_p_newlines: false,
+        forced_root_block: '',
+    });
+</script>
+
+<div class="card shadow mb-4">
+    <div class="card-body">
+        <div class="table-responsive">
+            <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                <div class="col-sm-12">
+                    @using (Html.BeginForm("ThemTinTuc", "Admin", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-horizontal">
+                            <h1 class="h3 mb-2 text-gray-800">Thêm tin tức</h1>
+                            <hr />
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.TENTT, "Tên tin tức", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.TENTT, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.TENTT, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.CHUDE, "Chủ đề", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.CHUDE, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.CHUDE, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.MOTA, "Mô tả", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.MOTA, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.MOTA, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.HINHTT, "Hình", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    <input name="HINHTT" type="file" />
+                                    <span style="color:red">@ViewBag.upload</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.NOIDUNG, "Nội dung", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    <textarea name="NOIDUNG" id="textarea"></textarea>
+                                    @Html.ValidationMessageFor(model => model.NOIDUNG, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <hr />
+                            <h1 class="h4 text-gray-900 mb-4">@ViewData["Error"]</h1>
+                            <hr />
+
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="Thêm" class="btn btn-default btn btn-info create-admin" />
+                                    <a href="@Url.Action("ListTinTuc","Admin")" class="btn btn-danger">Trở lại</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

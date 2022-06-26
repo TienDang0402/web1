@@ -1,0 +1,247 @@
+﻿@using WebBanlaptop.Models;
+@{
+
+    ViewBag.Title = "ListAdmin";
+    Layout = "~/Views/Layout/_AdminLayout.cshtml";
+    IEnumerable<NHANVIEN> lstnv = (IEnumerable<NHANVIEN>)ViewBag.lstnv;
+    int iDem = 0; // đếm sl sp trên trang
+    int iSoLuongSPHienThi = 5;// sl nv hiển nthij trên trang
+    int iTrang = 1;//số trang
+
+    NHANVIEN nv = (NHANVIEN)Session["Admin"];
+    var iNV = nv;
+
+    <script src="~/Scripts/admin.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.slim.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Danh sách Admin</h1>
+    <!-- DataTales Example -->
+    @if (iNV.BIGBOSS)
+    {
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <button type="button" class="btn btn-info create-admin" onclick="location.href='@Url.Action("addAdmin", "Admin")'">Tạo Tài Khoản</button>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                        <div class="col-sm-12">
+                            <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="1" colspan="1">Họ tên</th>
+                                        <th rowspan="1" colspan="1">Email</th>
+                                        <th rowspan="1" colspan="1">Số điện thoại</th>
+                                        <th rowspan="1" colspan="1">CMND/CCCD</th>
+                                        <th rowspan="1" colspan="1">Tài khoản</th>
+                                        <th rowspan="1" colspan="1">Trạng thái</th>
+                                        <th rowspan="1" colspan="1">Chức năng</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in lstnv)
+                                    {
+                                        if (iDem % iSoLuongSPHienThi == 0 && iDem != 0)
+                                        {
+                                            iTrang++;
+                                        }
+                                        <tr id="show" class="@Url.Content("odd Trang" + iTrang.ToString())">
+                                            <td class="sorting_1">@item.TENNV</td>
+                                            <td>@item.EMAIL</td>
+                                            <td>@item.SDT</td>
+                                            <td>@item.CCCD</td>
+                                            <td>@item.USERNAME</td>
+                                            @if (item.TRANGTHAI)
+                                            {
+                                                <td class="invert" style="color:green;font:bold">Đang Hoạt Động</td>
+                                            }
+                                            else
+                                            {
+                                                <td class="invert" style="color:red;font:bold">Tạm Khóa</td>
+                                            }
+
+
+                                            <td class="invert">
+                                                <abbr title="Đổi Mật Khẩu">
+                                                    <button type="button" class="btn btn-info modal-change-password" onclick="location.href='@Url.Action("changePWAdmin", "Admin",new { id = item.MANV, type=true})'"><i class="fa fa-pen" aria-hidden="true"></i></button>
+                                                </abbr>
+                                                @if (item.TRANGTHAI)
+                                                {
+                                                    <abbr title="Khóa Tài Khoản">
+                                                        <button type="button" class="btn btn-danger modal-lock-admin" data-toggle="modal" data-target="#lockAccount" data-account="@item.USERNAME" data-accountName="@item.TENNV"><i class="fa fa-lock" aria-hidden="true"></i></button>
+                                                    </abbr>
+                                                }
+                                                else
+                                                {
+                                                    <abbr title="Mở Khóa Tài Khoản">
+                                                        <button type="button" class="btn btn-danger modal-lock-admin" data-toggle="modal" data-target="#lockAccount" data-account="@item.USERNAME" data-accountName="@item.TENNV"><i class="fa fa-unlock" aria-hidden="true"></i></button>
+                                                    </abbr>
+                                                }
+
+                                            </td>
+                                        </tr>
+                                        iDem++;
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-sm-12 col-md-5">
+                            <div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">@*Trang @i/@iTrang*@ </div>
+                        </div>
+                        <div class="col-sm-12 col-md-7">
+                            <div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate">
+                                <ul class="pagination">
+                                    @for (int i = 1; i <= iTrang; i++)
+                                    {
+                                        <li class="paginate_button page-item">
+                                            <a class="page-link linkTrang" data-SoTrang="@Url.Content("Trang" + i)">@i</a>
+                                        </li>
+                                    }
+
+
+
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="card shadow mb-4">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                        <div class="col-sm-12">
+                            <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="1" colspan="1">Họ tên</th>
+                                        <th rowspan="1" colspan="1">Email</th>
+                                        <th rowspan="1" colspan="1">Số điện thoại</th>
+                                        <th rowspan="1" colspan="1">CMND/CCCD</th>
+                                        <th rowspan="1" colspan="1">Tài khoản</th>
+                                        <th rowspan="1" colspan="1">Trạng thái</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in lstnv)
+                                    {
+                                        if (iDem % iSoLuongSPHienThi == 0 && iDem != 0)
+                                        {
+                                            iTrang++;
+                                        }
+                                        <tr id="show" class="@Url.Content("odd Trang" + iTrang.ToString())">
+                                            <td class="sorting_1">@item.TENNV</td>
+                                            <td>@item.EMAIL</td>
+                                            <td>@item.SDT</td>
+                                            <td>@item.CCCD</td>
+                                            <td>@item.USERNAME</td>
+                                            @if (item.TRANGTHAI)
+                                            {
+                                                <td class="invert" style="color:green;font:bold">Đang Hoạt Động</td>
+                                            }
+                                            else
+                                            {
+                                                <td class="invert" style="color:red;font:bold">Tạm Khóa</td>
+                                            }
+                                        </tr>
+                                        iDem++;
+                                    }
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-sm-12 col-md-5">
+                            <div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">@*Trang @i/@iTrang*@ </div>
+                        </div>
+                        <div class="col-sm-12 col-md-7">
+                            <div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate">
+                                <ul class="pagination">
+                                    @for (int i = 1; i <= iTrang; i++)
+                                    {
+                                        <li class="paginate_button page-item">
+                                            <a class="page-link linkTrang" data-SoTrang="@Url.Content("Trang" + i)">@i</a>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+<!-- Modal khóa tài khoản-->
+<div class="modal fade" id="lockAccount" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="display:block">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">khóa / mở khóa tài khoản</h4>
+            </div>
+            <div class="modal-body">
+                <p>Xác nhận khóa / mở khóa tài khoản này</p>
+            </div>
+
+            <!--lưu giá trị tài khoản-->
+            <input type="hidden" id="hiddenAccount" value="0" />
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success " id="btn-lock-admin">
+                    Xác nhận
+                </button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*Phần phân trang admin*@
+<style>
+    .odd {
+        display: none;
+    }
+
+    .Trang1 {
+        display: block;
+        display: table-row;
+    }
+</style>
+@*Xử lý khi click vào thì hiển thị sp theo số trang tương ứng bằng jQuery*@
+<script>
+    $('.linkTrang').click(function () {
+        //cho tất cả các trang ẩn đi
+        $(".odd").hide();
+        //lây số trang từ thẻ a
+        var soTrang = $(this).attr("data-SoTrang");
+        //gọi class  thuộc soTrang đó thì hiển thị
+        $("." + soTrang).show();
+    });
+</script>
+
+
+
+
+
